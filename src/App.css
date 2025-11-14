@@ -15,12 +15,10 @@ body {
 
 /* === Main Container === */
 .container {
-  background: linear-gradient(135deg, #f236bd, #3eb5f0);
-  border-radius: 20px;
+  background: linear-gradient(135deg, #f405b0, #058acd);
   padding: 30px;
   width: 350px;
   color: white;
-  box-shadow: 0px 8px 25px rgba(243, 6, 6, 0.2);
   text-align: center;
 }
 
@@ -48,6 +46,7 @@ body {
   height: 28px;
   cursor: pointer;
   transition: transform 0.2s ease;
+  color: white;
 }
 
 .input-container img:hover {
@@ -124,10 +123,9 @@ body {
 }
 
 /* === Responsive === */
-@media (max-width: 400px) {
+@media (max-width: 768px) {
   .container {
-    width: 90%;
-    padding: 20px;
+    width: 100%;
   }
 
   .weather-details .temp {

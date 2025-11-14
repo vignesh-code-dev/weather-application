@@ -8,6 +8,11 @@ import rainyIcon from "./assets/rainy.png";
 import thunderIcon from "./assets/thunder.png";
 import windIcon from "./assets/wind.png";
 import partlyCloundIcon from "./assets/partly-cloudy.png";
+import moonIcon from "./assets/moon.png"
+import nightrainyIcon from "./assets/night rainy.png"
+import nightcloudsIcon from "./assets/night clouds.png"
+import nightthunderIcon from "./assets/night thunder.png"
+import nightpartlyCloundIcon from "./assets/night-partly-cloudy.png"
 const App = () => {
   const [text, setText] = useState("");
   const [icon, setIcon] = useState(sunIcon);
@@ -25,6 +30,11 @@ const App = () => {
     "03d": cloudsIcon,
     "11d": thunderIcon,
     "02d": partlyCloundIcon,
+    "01n": moonIcon,
+    "10n": nightrainyIcon,
+    "03n": nightcloudsIcon,
+    "11n": nightthunderIcon,
+    "02n": nightpartlyCloundIcon,
   };
 
   const weatherReport = async (cityName = "karur") => {
@@ -72,7 +82,7 @@ const App = () => {
           placeholder="search city"
           onChange={(e) => setText(e.target.value)}
         />
-        <img src={searchIcon} alt="search" onClick={HandleSearch} />
+        <img src={searchIcon} alt="search" onClick={HandleSearch}/>
       </div>
       <div className="weatherIcon">
         <img src={icon} alt="weatherIcon" />
